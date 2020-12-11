@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context=".ui.manage.ManageFragment">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextRestaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_res_name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorText">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutRestaurantDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRestaurantTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextRestaurantTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_res_tag"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorText">
+        </com.google.android.material.textfield.TextInputEditText>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/listTag">
+        </androidx.appcompat.widget.AppCompatSpinner>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextRestaurantDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_res_description"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantAddress"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_address"
+    android:inputType="text"
+    android:maxLines="2"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantCity"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantCity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_city"
+    android:inputType="text"
+    android:maxLines="1"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantState"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantState"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_state"
+    android:inputType="text"
+    android:maxLines="1"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantZip"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantZip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_zip"
+    android:inputType="text"
+    android:maxLines="1"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantCountry"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantCountry"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_country"
+    android:inputType="text"
+    android:maxLines="1"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/textInputLayoutRestaurantPhone"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp">
+<com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/textInputEditTextRestaurantPhone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/text_res_phone"
+    android:inputType="text"
+    android:maxLines="1"
+    android:textColor="@color/colorText">
+
+</com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+<androidx.appcompat.widget.AppCompatButton
+android:id="@+id/appCompatButtonDone"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+android:background="@color/colorTextHint"
+android:text="@string/btn_res_done"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+

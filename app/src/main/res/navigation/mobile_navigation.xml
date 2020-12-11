@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.personalrestaurantguide.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_manage"
+        android:name="com.example.personalrestaurantguide.ui.manage.ManageFragment"
+        android:label="@string/menu_manage"
+        tools:layout="@layout/manage_fragment" />
+
+    <fragment
+        android:id="@+id/nav_show"
+        android:name="com.example.personalrestaurantguide.ui.show.ShowFragment"
+        android:label="@string/menu_show"
+        tools:layout="@layout/show_fragment" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.personalrestaurantguide.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/search_fragment" />
+
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.example.personalrestaurantguide.ui.detail.DetailFragment"
+        android:label="@string/menu_manage"
+        tools:layout="@layout/detail_fragment" />
+
+</navigation>
