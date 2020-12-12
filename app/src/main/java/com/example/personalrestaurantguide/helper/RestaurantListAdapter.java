@@ -2,6 +2,7 @@ package com.example.personalrestaurantguide.helper;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -86,8 +87,33 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
     }
 
     private void shareDetail(Restaurant restaurant,View v) {
+        final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String []{ "serveroverloadofficial@gmail.com"});
+        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Restaurant review");
+        String mail="Please vist below restaurant\n";
+        String name=restaurant.getName();
+        String address=restaurant.getAddress()+","+restaurant.getCity()+","+restaurant.getState()+","+restaurant.getCountry();
+
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, mail);
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, name+"\n");
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, address);
+
+
+        emailIntent.setType("message/rfc822");
+        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+        try {
+
+            activity.startActivity(Intent.createChooser(emailIntent,
+                    "Send email using..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(v.getContext(),
+                    "No email clients installed.",
+                    Toast.LENGTH_SHORT).show();
+        }
 
     }
+
 
     @Override
     public int getItemCount() {

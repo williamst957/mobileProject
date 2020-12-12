@@ -1,7 +1,9 @@
 package com.example.personalrestaurantguide.ui.manage;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
@@ -23,6 +25,7 @@ import android.widget.Toast;
 import com.example.personalrestaurantguide.R;
 import com.example.personalrestaurantguide.helper.RestaurantController;
 import com.example.personalrestaurantguide.model.Restaurant;
+import com.example.personalrestaurantguide.ui.home.HomeFragment;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Arrays;
@@ -83,7 +86,7 @@ public class ManageFragment extends Fragment {
                 restaurant.setCountry(edCountry.getText().toString().trim());
                 restaurant.setPhone(edPhone.getText().toString().trim());
                 restaurant.setTag(edTag.getText().toString().trim());
-                restaurant.setRate((float)0.0);
+                restaurant.setRate(restaurant.getRate()<0.0?(float)0.0:restaurant.getRate());
                 restaurant.setActive(1);
                 if(validateData(restaurant))
                 {
@@ -99,6 +102,17 @@ public class ManageFragment extends Fragment {
     }
 
     private void emptyAllFiled() {
+        edName.setText("");
+        edAddress.setText("");
+        edDescription.setText("");
+        edCity.setText("");
+        edState.setText("");
+        edZip.setText("");
+        edCountry.setText("");
+        edPhone.setText("");
+        edTag.setText("");
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        fm.beginTransaction().replace(R.id.nav_host_fragment, new HomeFragment()).addToBackStack(null).commit();
     }
 
     private boolean validateData(Restaurant restaurant) {

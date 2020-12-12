@@ -41,7 +41,7 @@ public class HostActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_manage, R.id.nav_show,R.id.nav_search,R.id.nav_detail)
+                R.id.nav_home, R.id.nav_manage, R.id.nav_show,R.id.nav_detail,R.id.nav_about)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -73,7 +73,7 @@ public class HostActivity extends AppCompatActivity {
         for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
             fm.popBackStack();
         }
-        fm.beginTransaction().replace(R.id.nav_host_fragment, new HomeFragment()).addToBackStack(null).commit();
+       // fm.beginTransaction().replace(R.id.nav_host_fragment, new HomeFragment()).addToBackStack(null).commit();
         super.onBackPressed();
     }
 }
