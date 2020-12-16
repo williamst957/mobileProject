@@ -45,8 +45,8 @@
     <string name="text_res_address">Address</string>
     <string name="text_res_description">Description</string>
     <string name="text_res_city">City</string>
-    <string name="text_res_state">State</string>
-    <string name="text_res_zip">Zip</string>
+    <string name="text_res_state">State/Province</string>
+    <string name="text_res_zip">Zip/Postal Code</string>
     <string name="text_res_country">Country</string>
     <string name="text_res_phone">Phone</string>
     <string name="text_res_tag">Tag</string>
